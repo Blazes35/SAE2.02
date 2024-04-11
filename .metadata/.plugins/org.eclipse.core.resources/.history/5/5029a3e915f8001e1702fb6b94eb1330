@@ -9,9 +9,9 @@ import java.util.Queue;
 
 public class SolverWithBFS implements Solver {
 	private Queue<Node> file = new LinkedList<>();
-	private GraphSoluce soluce;
+	private Queue<Node> soluceNode = new LinkedList<>();
 	private List<Node> marquer;
-	private Map<Node, Node> cheminNodeInverse;
+	private HashMap<Node, Node> cheminNodeInverse;
 	private Node nodeA;
 	private Node nodeB;
 	private Node sommet;
@@ -30,30 +30,30 @@ public class SolverWithBFS implements Solver {
 		while (!file.isEmpty()) {
 			sommet = file.peek();
 			for (Node voisin : sommet.neighbors()) {
-				steps++;
 				if (!marquer.contains(voisin)) {
 					cheminNodeInverse.put(voisin,sommet);
 					marquer.add(voisin);
 					file.offer(voisin);
 				}
+				
 			}
 		}
 		Node noeud = nodeB;
 		while(noeud!=nodeA) {
-	    	for (HashMap.Entry<Node, Node> couple : cheminNodeInverse.entrySet()) {
-	    		steps++;
-	    		if (noeud.equals(couple.getValue())) {
-			        	soluce.add(couple.getKey());
-			    }
+	    	for (HashMap.Entry<Node, Node> entry : cheminNodeInverse.entrySet()) {
+	    		 if (noeud.equals(entry.getValue())) {
+			        	soluceNode.offer(entry.getKey());
+			        } 
 	    	}
 		}
 	}
 
 	@Override
 	public GraphSoluce getSoluce() {
-		return soluce;
+		return null;
 	}
 
+	@Override
 	public int getSteps() {
 		return steps;
 	}

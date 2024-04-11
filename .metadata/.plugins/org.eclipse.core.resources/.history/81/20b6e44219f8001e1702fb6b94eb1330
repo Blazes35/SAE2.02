@@ -1,0 +1,13 @@
+package sae;
+
+import java.util.List;
+
+public class Node {
+	Comparator
+
+	public List<Node> neighbors() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

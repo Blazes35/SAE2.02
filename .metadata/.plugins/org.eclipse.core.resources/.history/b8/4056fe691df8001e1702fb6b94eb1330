@@ -3,7 +3,6 @@ package sae;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 import java.util.Queue;
 
 
@@ -11,7 +10,7 @@ public class SolverWithBFS implements Solver {
 	private Queue<Node> file = new LinkedList<>();
 	private GraphSoluce soluce;
 	private List<Node> marquer;
-	private Map<Node, Node> cheminNodeInverse;
+	private HashMap<Node, Node> cheminNodeInverse;
 	private Node nodeA;
 	private Node nodeB;
 	private Node sommet;

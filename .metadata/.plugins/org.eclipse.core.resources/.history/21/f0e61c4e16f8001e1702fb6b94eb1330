@@ -5,13 +5,14 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Queue;
+import java.util.Stack;
 
 
 public class SolverWithBFS implements Solver {
 	private Queue<Node> file = new LinkedList<>();
 	private GraphSoluce soluce;
 	private List<Node> marquer;
-	private Map<Node, Node> cheminNodeInverse;
+	private HashMap<Node, Node> cheminNodeInverse;
 	private Node nodeA;
 	private Node nodeB;
 	private Node sommet;
@@ -30,18 +31,17 @@ public class SolverWithBFS implements Solver {
 		while (!file.isEmpty()) {
 			sommet = file.peek();
 			for (Node voisin : sommet.neighbors()) {
-				steps++;
 				if (!marquer.contains(voisin)) {
 					cheminNodeInverse.put(voisin,sommet);
 					marquer.add(voisin);
 					file.offer(voisin);
 				}
+				
 			}
 		}
 		Node noeud = nodeB;
 		while(noeud!=nodeA) {
 	    	for (HashMap.Entry<Node, Node> couple : cheminNodeInverse.entrySet()) {
-	    		steps++;
 	    		if (noeud.equals(couple.getValue())) {
 			        	soluce.add(couple.getKey());
 			    }
@@ -51,9 +51,11 @@ public class SolverWithBFS implements Solver {
 
 	@Override
 	public GraphSoluce getSoluce() {
+		// TODO Auto-generated method stub
 		return soluce;
 	}
 
+	@Override
 	public int getSteps() {
 		return steps;
 	}
