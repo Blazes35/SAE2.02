@@ -1,0 +1,21 @@
+package sae;
+
+import java.util.List;
+
+import jdk.internal.jimage.ImageReader.Node;
+
+public class GraphSoluce {
+	private List<Node> soluce;
+	
+	public GraphSoluce() {
+		
+	}
+	
+	public void add(Node node) {
+		soluce.add(node);
+	}
+	
+	public List<Node> getSoluce(){
+		
+	}
+}
