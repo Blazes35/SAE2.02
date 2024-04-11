@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;SAE 2.02 starting code&apos;" deleteContents="false" description="Delete resource &apos;SAE 2.02 starting code&apos;" element1="/SAE 2.02 starting code" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1712818724939"/>
+</session>
