@@ -31,5 +31,8 @@ Le projet **SAE2.02** consiste à développer une application qui résout le par
 
 ## Technologies utilisées
 
-- **JavaScript** – Utilisé principalement pour la logique de visualisation et l'interactivité (93,6 % du code).
-- **Java** – Employé pour certains traitements ou parties de la logique métier (6,4 % du code).
+- **JavaScript** – Utilisé principalement pour la logique de visualisation et l'interactivité.
+- **Java** – Employé pour certains traitements ou parties de la logique métier.
+
+  ## Contributeurs
+- [Loris ADAM](https://github.com/Blazes35)
